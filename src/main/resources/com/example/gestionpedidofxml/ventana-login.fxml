@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.gestionpedidofxml.controllers.LoginController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="634.0" prefWidth="397.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="60.0" layoutY="174.0" text="GESTION DE PEDIDO" textFill="WHITE">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="193.0" fitWidth="192.0" layoutX="77.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/carrito.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="634.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="111.0" layoutX="145.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/sesion.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="149.0" layoutY="151.0" text="INICIAR SESION" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUser" layoutX="73.0" layoutY="232.0" prefWidth="250.0" promptText="email" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="73.0" layoutY="337.0" prefHeight="28.0" prefWidth="250.0" promptText="Contraseña" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnInicar" layoutX="145.0" layoutY="427.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #ff0000;" text="Iniciar Sesion" textFill="WHITE" />
+            <Label layoutX="90.0" layoutY="544.0" text="Introduzca sus datos para iniciar sesion" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
