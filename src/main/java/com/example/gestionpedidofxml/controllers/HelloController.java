@@ -1,4 +1,4 @@
-package com.example.gestionpedidofxml;
+package com.example.gestionpedidofxml.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

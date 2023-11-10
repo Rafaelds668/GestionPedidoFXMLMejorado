@@ -5,4 +5,6 @@ module com.example.gestionpedidofxml {
 
     opens com.example.gestionpedidofxml to javafx.fxml;
     exports com.example.gestionpedidofxml;
+    exports com.example.gestionpedidofxml.controllers;
+    opens com.example.gestionpedidofxml.controllers to javafx.fxml;
 }
