@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="inicio">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/bbdd.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/style.css" afterDir="false" />
+    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="ventana-login, el css y el properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaUsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAOImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAOImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAOImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAOImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/ventana-login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/bbdd.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/carrito.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/carrito.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/pedidos.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/pedidos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/sesion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/sesion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +38,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2Xz7dI1uiIx1qEB5flOV0RI35uH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,6 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/GestionPedidoFXML/src/main/resources/com/example/gestionpedidofxml",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -55,24 +78,14 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\views" />
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\views\imagenes" />
       <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\imagenes" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="GestionPedidoFXMLMejorado" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="GestionPedidoFXMLMejorado" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,7 +95,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699620142072</updated>
-      <workItem from="1699620143258" duration="1773000" />
+      <workItem from="1699620143258" duration="1857000" />
+      <workItem from="1699720339771" duration="2722000" />
+      <workItem from="1699724349566" duration="1536000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <option name="closed" value="true" />
@@ -108,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699621003979</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ventana-login, el css y el properties">
+      <option name="closed" value="true" />
+      <created>1699622324823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699622324823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio" />
+    <MESSAGE value="ventana-login, el css y el properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="ventana-login, el css y el properties" />
   </component>
 </project>
