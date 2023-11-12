@@ -1,4 +1,4 @@
 package com.example.gestionpedidofxml.domain.products;
 
-public class ProductoDAOImp {
+public class ProductoDAO {
 }

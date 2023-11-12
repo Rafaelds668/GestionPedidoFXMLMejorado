@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.LoginController">
    <left>
       <AnchorPane prefHeight="634.0" prefWidth="397.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
          <children>
@@ -51,7 +51,7 @@
                </font>
             </PasswordField>
             <Button fx:id="btnInicar" layoutX="145.0" layoutY="427.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #ff0000;" text="Iniciar Sesion" textFill="WHITE" />
-            <Label layoutX="90.0" layoutY="544.0" text="Introduzca sus datos para iniciar sesion" textFill="RED" />
+            <Label fx:id="info" layoutX="90.0" layoutY="544.0" text="Introduzca sus datos para iniciar sesion" textFill="RED" />
          </children>
       </AnchorPane>
    </center>

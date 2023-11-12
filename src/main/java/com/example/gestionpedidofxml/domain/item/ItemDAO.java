@@ -3,13 +3,12 @@ package com.example.gestionpedidofxml.domain.item;
 import com.example.gestionpedidofxml.domain.DAO;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
  * Implementación de la interfaz ItemDAO para acceder y gestionar datos de ítems en una base de datos.
  */
-public class ItemDAOImp implements DAO<Item> {
+public class ItemDAO implements DAO<Item> {
     /**
      * Conexión a la base de datos utilizada para acceder a los datos de ítems.
      */
@@ -25,12 +24,13 @@ public class ItemDAOImp implements DAO<Item> {
      *
      * @param conn Conexión a la base de datos que se utilizará para acceder a los datos de ítems.
      */
-    public ItemDAOImp(Connection conn) {
+    public ItemDAO(Connection conn) {
         this.connection = conn;
     }
 
+
     @Override
-    public ArrayList<Item> loadAll(String codigo_Pedido) throws SQLException {
+    public ArrayList<Item> loadAll() {
         return null;
     }
 }

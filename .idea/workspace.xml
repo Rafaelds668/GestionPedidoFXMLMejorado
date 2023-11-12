@@ -4,30 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="ventana-login, el css y el properties">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaUsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAOImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAOImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAOImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAOImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" afterDir="false" />
+    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="principio hibernate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/bbdd.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/carrito.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/carrito.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/pedidos.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/pedidos.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/imagenes/sesion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/sesion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAOImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/GestionPedidoFXML/src/main/resources/com/example/gestionpedidofxml",
+    "last_opened_file_path": "C:/Users/rafae/Downloads/GestorJuegos (1)/GestorJuegos",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -97,7 +90,8 @@
       <updated>1699620142072</updated>
       <workItem from="1699620143258" duration="1857000" />
       <workItem from="1699720339771" duration="2722000" />
-      <workItem from="1699724349566" duration="1536000" />
+      <workItem from="1699724349566" duration="1594000" />
+      <workItem from="1699782225156" duration="4762000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <option name="closed" value="true" />
@@ -131,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699622324823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="principio hibernate">
+      <option name="closed" value="true" />
+      <created>1699725931019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699725931020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +153,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio" />
     <MESSAGE value="ventana-login, el css y el properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="ventana-login, el css y el properties" />
+    <MESSAGE value="principio hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="principio hibernate" />
   </component>
 </project>
