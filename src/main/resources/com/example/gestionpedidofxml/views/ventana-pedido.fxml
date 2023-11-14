@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.VentanaPedidoController">
    <children>
-      <Button fx:id="btnCerrarSesion" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #ff0000;" text="Logout" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <VBox.margin>
-            <Insets right="20.0" top="20.0" />
-         </VBox.margin>
-      </Button>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menubarLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                  <MenuItem fx:id="menuVolver" mnemonicParsing="false" onAction="#volver" text="Volver" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
       <BorderPane prefHeight="379.0" prefWidth="600.0">
          <top>
             <Label text="Detalles del Pedido" textFill="RED" BorderPane.alignment="CENTER">
@@ -44,13 +47,6 @@
                </BorderPane.margin>
             </TableView>
          </center>
-         <bottom>
-            <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: #ff0000;" text="Volver" textFill="WHITE" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets bottom="20.0" top="20.0" />
-               </BorderPane.margin>
-            </Button>
-         </bottom>
       </BorderPane>
    </children>
 </VBox>

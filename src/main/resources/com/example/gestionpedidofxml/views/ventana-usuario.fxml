@@ -3,76 +3,95 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.VentanaUsuarioController">
-   <center>
-      <VBox alignment="TOP_RIGHT" prefHeight="600.0" prefWidth="850.0">
-         <children>
-            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: #ff0000;" text="Logout" textFill="WHITE">
-               <VBox.margin>
-                  <Insets right="20.0" top="20.0" />
-               </VBox.margin>
-            </Button>
-            <BorderPane prefHeight="542.0" prefWidth="850.0">
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-               <top>
-                  <HBox prefHeight="86.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <ImageView fitHeight="71.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@imagenes/pedidos.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="30.0" top="5.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label fx:id="labelTitulo" text="Bienvenido, usuario" textFill="RED">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="10.0" top="20.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-               </top>
-               <center>
-                  <VBox alignment="TOP_CENTER" prefHeight="325.0" prefWidth="850.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Label contentDisplay="CENTER" text="Informacion sobre sus pedidos" textFill="RED">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TableView fx:id="tvPedidos" prefHeight="397.0" prefWidth="810.0" stylesheets="@../style.css">
-                          <columns>
-                            <TableColumn fx:id="colIdPedido" prefWidth="132.79996299743652" text="ID" />
-                            <TableColumn fx:id="colCodPedido" prefWidth="192.0" text="CODIGO DE PEDIDO" />
-                              <TableColumn fx:id="colFecha" prefWidth="150.4000244140625" text="FECHA" />
-                              <TableColumn fx:id="colUsuario" prefWidth="163.19998168945312" text="USUARIO" />
-                              <TableColumn fx:id="colTotal" prefWidth="173.60003662109375" text="TOTAL" />
-                          </columns>
-                           <VBox.margin>
-                              <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
-                           </VBox.margin>
-                        </TableView>
-                     </children>
-                  </VBox>
-               </center>
-            </BorderPane>
-         </children>
-      </VBox>
-   </center>
-</BorderPane>
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.VentanaUsuarioController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <center>
+            <VBox alignment="TOP_RIGHT" prefHeight="541.0" prefWidth="850.0">
+               <children>
+                  <BorderPane prefHeight="542.0" prefWidth="850.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <top>
+                        <HBox prefHeight="86.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="71.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/pedidos.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="labelTitulo" text="Bienvenido, usuario" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="419.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label contentDisplay="CENTER" text="Informacion sobre sus pedidos" textFill="RED">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tvPedidos" prefHeight="388.0" prefWidth="810.0" stylesheets="@../style.css">
+                                <columns>
+                                  <TableColumn fx:id="colIdPedido" prefWidth="132.79996299743652" text="ID" />
+                                  <TableColumn fx:id="colCodPedido" prefWidth="192.0" text="CODIGO DE PEDIDO" />
+                                    <TableColumn fx:id="colFecha" prefWidth="150.4000244140625" text="FECHA" />
+                                    <TableColumn fx:id="colUsuario" prefWidth="163.19998168945312" text="USUARIO" />
+                                    <TableColumn fx:id="colTotal" prefWidth="173.60003662109375" text="TOTAL" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="146.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnNuevoPedido" layoutX="529.0" layoutY="58.0" mnemonicParsing="false" onAction="#nuevoPedido" prefHeight="70.0" prefWidth="291.0" text="                          Añadir Nuevo Pedido" />
+                  <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="539.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</VBox>
