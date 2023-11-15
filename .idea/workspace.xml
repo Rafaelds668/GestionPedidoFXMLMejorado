@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="principio hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" afterDir="false" />
+    <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="creado menBar a cada fxml con sus respectivos MenuItem">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/CrearSesionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/imagenes/crearSesion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-crearSesion.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaUsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAOImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" afterDir="false" />
@@ -75,10 +83,20 @@
       <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\views" />
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources" />
       <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\views\imagenes" />
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\views" />
       <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml\imagenes" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.gestionpedidofxml.Main" />
+      <module name="GestionPedidoFXMLMejorado" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,6 +110,12 @@
       <workItem from="1699720339771" duration="2722000" />
       <workItem from="1699724349566" duration="1594000" />
       <workItem from="1699782225156" duration="4762000" />
+      <workItem from="1699788410848" duration="67000" />
+      <workItem from="1699860124451" duration="1265000" />
+      <workItem from="1699891840594" duration="1399000" />
+      <workItem from="1699961908824" duration="1807000" />
+      <workItem from="1699979342668" duration="15562000" />
+      <workItem from="1700032353658" duration="17987000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <option name="closed" value="true" />
@@ -133,7 +157,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699725931020</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creacion de clases">
+      <option name="closed" value="true" />
+      <created>1699788462283</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699788462283</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Clase Main">
+      <option name="closed" value="true" />
+      <created>1699980139293</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699980139294</updated>
+    </task>
+    <task id="LOCAL-00008" summary="creado menBar a cada fxml con sus respectivos MenuItem">
+      <option name="closed" value="true" />
+      <created>1699980213097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699980213097</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +202,20 @@
     <MESSAGE value="inicio" />
     <MESSAGE value="ventana-login, el css y el properties" />
     <MESSAGE value="principio hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="principio hibernate" />
+    <MESSAGE value="creacion de clases" />
+    <MESSAGE value="Clase Main" />
+    <MESSAGE value="creado menBar a cada fxml con sus respectivos MenuItem" />
+    <option name="LAST_COMMIT_MESSAGE" value="creado menBar a cada fxml con sus respectivos MenuItem" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/HibernateUtil.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

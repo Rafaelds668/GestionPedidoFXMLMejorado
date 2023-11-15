@@ -7,15 +7,17 @@ import org.hibernate.cfg.Configuration;
 @Log
 public class HibernateUtil {
 
-    private static SessionFactory sf = null;
+    private static SessionFactory sf;
 
     static {
         try {
             Configuration cfg = new Configuration();
             cfg.configure();
+            sf = cfg.buildSessionFactory();
             log.info("SessionFactory creada con exito!");
         } catch (Exception ex) {
-            log.severe("Error al crear SessionFactory()");
+            log.severe("Error al crear SessionFactory()"+ ex.getMessage());
+            ex.printStackTrace(); //IMprime la traza de la excepcion
         }
     }
 

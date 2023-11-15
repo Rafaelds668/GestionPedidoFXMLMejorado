@@ -1,36 +1,44 @@
 package com.example.gestionpedidofxml.domain.item;
 
 import com.example.gestionpedidofxml.domain.DAO;
+import jakarta.persistence.SecondaryTable;
 
-import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-/**
- * Implementación de la interfaz ItemDAO para acceder y gestionar datos de ítems en una base de datos.
- */
 public class ItemDAO implements DAO<Item> {
-    /**
-     * Conexión a la base de datos utilizada para acceder a los datos de ítems.
-     */
-    private static Connection connection;
 
-    /**
-     * Consulta SQL para cargar todos los ítems de un pedido por su código.
-     */
-    private static final String queryLoadAll = "SELECT * FROM item WHERE codigo_pedido = ?";
+    public static final HashMap<String,String> QUERY_ATTR;
 
-    /**
-     * Constructor de la clase ItemDAOImp.
-     *
-     * @param conn Conexión a la base de datos que se utilizará para acceder a los datos de ítems.
-     */
-    public ItemDAO(Connection conn) {
-        this.connection = conn;
+    static {
+        QUERY_ATTR = new HashMap<>();
+        QUERY_ATTR.put("id","select distinct(item.id) form Item item");
+        QUERY_ATTR.put("codigo_pedido","select distinct(item.codigo_pedido) form Item item");
+        QUERY_ATTR.put("producto_id","select distinct(item.producto_id) form Item item");
+        QUERY_ATTR.put("cantidad","select distinct(item.cantidad) form Item item");
+    }
+    @Override
+    public ArrayList<Item> getAll() {
+        return null;
     }
 
+    @Override
+    public Item get(Long id) {
+        return null;
+    }
 
     @Override
-    public ArrayList<Item> loadAll() {
+    public Item save(Item data) {
         return null;
+    }
+
+    @Override
+    public void update(Item data) {
+
+    }
+
+    @Override
+    public void delete(Item data) {
+
     }
 }

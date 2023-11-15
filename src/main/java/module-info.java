@@ -9,6 +9,12 @@ module com.example.gestionpedidofxml {
     requires java.naming;
     requires java.sql;
 
+    opens com.example.gestionpedidofxml.domain.user;
+    opens com.example.gestionpedidofxml.domain.item;
+    opens com.example.gestionpedidofxml.domain.orders;
+    opens com.example.gestionpedidofxml.domain.products;
+
+
     opens com.example.gestionpedidofxml to javafx.fxml;
     opens com.example.gestionpedidofxml.controllers to javafx.fxml;
 
