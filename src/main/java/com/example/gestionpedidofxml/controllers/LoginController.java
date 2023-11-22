@@ -1,7 +1,7 @@
 package com.example.gestionpedidofxml.controllers;
 
 import com.example.gestionpedidofxml.Main;
-import com.example.gestionpedidofxml.Session;
+import com.example.gestionpedidofxml.domain.Session;
 import com.example.gestionpedidofxml.domain.HibernateUtil;
 import com.example.gestionpedidofxml.domain.user.Usuario;
 import com.example.gestionpedidofxml.domain.user.UsuarioDAO;
@@ -50,7 +50,7 @@ public class LoginController implements Initializable {
               /*Guardar usuario en sesion e ir a la proxima ventana*/
 
               try {
-                  Main.changeScene("ventana-usuario.fxml", "Pedidos");
+                  Main.loadFXML("pedidosview.fxml", "Pedidos");
               } catch (Exception e) {
                   throw new RuntimeException(e);
               }
@@ -62,7 +62,7 @@ public class LoginController implements Initializable {
 
     @FXML
     public void crearSesion(ActionEvent actionEvent){
-        Main.crearSesion("views/ventana-crearSesion.fxml");
+        Main.loadFXML("ventana-crearSesion.fxml", "Crear Sesion");
     }
 
     @Override

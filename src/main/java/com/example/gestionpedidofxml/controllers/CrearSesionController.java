@@ -35,10 +35,11 @@ public class CrearSesionController {
 
     @javafx.fxml.FXML
     public void volver (ActionEvent actionEvent){
-        Main.changeScene("ventana-login.fxml", "Login");
+        Main.loadFXML("ventana-login.fxml", "Login");
     }
     @javafx.fxml.FXML
     public void crearUsuario(ActionEvent actionEvent){
+
 
     }
 }

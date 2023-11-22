@@ -22,27 +22,16 @@ public class Main extends Application {
         stage.show();
     }
 
-    public static void changeScene (String fxml, String title){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/" + fxml));
-            Scene scene = new Scene(fxmlLoader.load(), 850, 600);
-            myStage.setTitle(title);
+    public static void loadFXML (String fxml, String titulo){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/"+fxml));
+            Scene scene = new Scene(fxmlLoader.load());
+            myStage.setTitle(titulo);
             myStage.setScene(scene);
             myStage.show();
         } catch (IOException e) {
+            System.out.println("Error al cargar el archivo "+fxml);
             throw new RuntimeException(e);
-        }
-
-    }
-
-    public static void crearSesion (String stage){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(stage));
-            Scene scene = new Scene(fxmlLoader.load(), 500, 600);
-            myStage.setTitle("Crear Usuario");
-            myStage.setScene(scene);
-        } catch (IOException var3) {
-            throw new RuntimeException(var3);
         }
     }
     public static void main(String[] args) {

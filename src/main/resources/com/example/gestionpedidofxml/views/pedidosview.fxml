@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="584.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.VentanaUsuarioController">
+<VBox prefHeight="584.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.PedidosController">
    <children>
       <MenuBar>
         <menus>
@@ -55,8 +55,8 @@
                      </children>
                   </HBox>
                </top>
-               <center>
-                  <VBox alignment="TOP_CENTER" prefHeight="419.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+               <bottom>
+                  <VBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="795.0" BorderPane.alignment="CENTER">
                      <children>
                         <Label fx:id="info" contentDisplay="CENTER" text="Informacion sobre sus pedidos" textFill="RED">
                            <font>
@@ -68,27 +68,28 @@
                               <Font size="11.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tvPedidos" prefHeight="261.0" prefWidth="790.0" stylesheets="@../style.css">
+                        <TableView fx:id="tvPedidos" prefHeight="230.0" prefWidth="139.0" stylesheets="@../style.css">
                           <columns>
                             <TableColumn fx:id="colIdPedido" prefWidth="132.79996299743652" text="ID" />
-                            <TableColumn fx:id="colCodPedido" prefWidth="192.0" text="CODIGO DE PEDIDO" />
-                              <TableColumn fx:id="colFecha" prefWidth="150.4000244140625" text="FECHA" />
-                              <TableColumn fx:id="colUsuario" prefWidth="163.19998168945312" text="USUARIO" />
-                              <TableColumn fx:id="colTotal" prefWidth="173.60003662109375" text="TOTAL" />
+                              <TableColumn fx:id="colFecha" prefWidth="175.0" text="FECHA" />
+                              <TableColumn fx:id="colUsuario" prefWidth="226.0" text="USUARIO" />
+                              <TableColumn fx:id="colTotal" prefWidth="255.0" text="TOTAL" />
                           </columns>
                            <VBox.margin>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
                            </VBox.margin>
                         </TableView>
-                        <AnchorPane prefHeight="84.0" prefWidth="850.0">
+                        <AnchorPane prefHeight="125.0" prefWidth="830.0">
                            <children>
-                              <Button fx:id="btnNuevoPedido" layoutX="478.0" mnemonicParsing="false" onAction="#nuevoPedido" prefHeight="70.0" prefWidth="291.0" text="                          Añadir Nuevo Pedido" />
-                              <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="539.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="btnEliminar" layoutX="342.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #ff0000;" text="ELIMINAR" textFill="WHITE" />
+                              <Button fx:id="btnEditar" layoutX="637.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #867b7b;" text="EDITAR" />
+                              <Button fx:id="btnNuevoPedido" alignment="CENTER" contentDisplay="RIGHT" layoutX="50.0" mnemonicParsing="false" onAction="#nuevoPedido" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #2b7835;" text="+ NUEVO PEDIDO" textAlignment="RIGHT" textFill="WHITE" />
+                              <Button fx:id="btnDetalles" layoutX="341.0" layoutY="63.0" mnemonicParsing="false" onAction="#detalles" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #4400ff;" text="DETALLES" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                      </children>
                   </VBox>
-               </center>
+               </bottom>
             </BorderPane>
          </children>
       </VBox>

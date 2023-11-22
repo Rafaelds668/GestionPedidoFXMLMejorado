@@ -24,11 +24,12 @@ public class Item implements Serializable {
      */
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     /**
      * Codigo de pedido al que pertenece el item
      */
+
     @ManyToOne
     @JoinColumn (name = "codigo_pedido", referencedColumnName = "codigo")
     private Pedido pedido;

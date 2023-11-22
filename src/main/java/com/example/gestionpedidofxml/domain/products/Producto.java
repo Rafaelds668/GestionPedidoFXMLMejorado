@@ -18,7 +18,7 @@ public class Producto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
 
     @Column(name="nombre")
     private String nombre;
@@ -32,4 +32,21 @@ public class Producto implements Serializable {
     @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
     private List<Item> items;
 
+    public Producto(Long id_producto, String nombre, Double precio, Integer cantidad) {
+        this.id = id_producto;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidadDisponible = cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "id_producto=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", cantidad=" + cantidadDisponible +
+                ", items size=" + items.size() +
+                '}';
+    }
 }

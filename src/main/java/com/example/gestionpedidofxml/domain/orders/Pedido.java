@@ -32,7 +32,7 @@ public class Pedido implements Serializable {
     private Usuario usuario;
 
     @Column(name="total")
-    private Long total;
+    private String total;
 
     @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
     private List<Item> items;
