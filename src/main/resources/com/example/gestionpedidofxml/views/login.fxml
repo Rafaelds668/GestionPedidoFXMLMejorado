@@ -40,19 +40,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUser" layoutX="73.0" layoutY="232.0" prefWidth="250.0" promptText="email" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="txtUser" layoutX="73.0" layoutY="232.0" prefWidth="250.0" promptText="email" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" text="jorge@gmail.com">
                <font>
                   <Font size="12.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="txtPassword" layoutX="73.0" layoutY="337.0" prefHeight="28.0" prefWidth="250.0" promptText="Contraseña" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;">
+            <PasswordField fx:id="txtPassword" layoutX="73.0" layoutY="337.0" prefHeight="28.0" prefWidth="250.0" promptText="Contraseña" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" text="1234">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="btnInicar" defaultButton="true" layoutX="73.0" layoutY="425.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #ff0000;" text="Iniciar Sesion" textFill="WHITE" />
+            <Button fx:id="btnInicar" defaultButton="true" layoutX="156.0" layoutY="423.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #ff0000;" text="Iniciar Sesion" textFill="WHITE" />
             <Label fx:id="info" layoutX="90.0" layoutY="544.0" text="Introduzca sus datos para iniciar sesion" textFill="RED" />
-            <Button fx:id="btnCrearUsuario" layoutX="246.0" layoutY="425.0" mnemonicParsing="false" onAction="#crearSesion" style="-fx-background-color: #ff0000;" text="Crear Cuenta" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>

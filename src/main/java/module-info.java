@@ -20,6 +20,7 @@ module com.example.gestionpedidofxml {
 
     exports com.example.gestionpedidofxml;
     exports com.example.gestionpedidofxml.controllers;
-    exports com.example.gestionpedidofxml.domain;
+    exports com.example.gestionpedidofxml.domain.user;
+    exports com.example.gestionpedidofxml.domain.orders;
     opens com.example.gestionpedidofxml.domain to javafx.fxml;
 }

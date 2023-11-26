@@ -10,7 +10,12 @@ import java.util.ArrayList;
 public class ProductoDAO implements DAO<Producto> {
     @Override
     public ArrayList<Producto> getAll() {
-        return null;
+        var salida = new ArrayList<Producto>(0);
+        try(Session sesion = HibernateUtil.getSessionFactory().openSession()){
+            Query<Producto> query = sesion.createQuery(" from Producto ", Producto.class);
+            salida = (ArrayList<Producto>) query.getResultList();
+        }
+        return salida;
     }
 
     @Override
@@ -33,13 +38,4 @@ public class ProductoDAO implements DAO<Producto> {
 
     }
 
-    public Producto productoPorNombre(String nombreProducto){
-        Producto result = null;
-        try(Session s = HibernateUtil.getSessionFactory().openSession()) {
-            Query<Producto> q = s.createQuery("from Producto p where p.nombre =: n",Producto.class);
-            q.setParameter("n",nombreProducto);
-            result = q.getSingleResultOrNull();
-        }
-        return result;
-    }
 }

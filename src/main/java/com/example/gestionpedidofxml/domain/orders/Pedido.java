@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -28,14 +29,14 @@ public class Pedido implements Serializable {
     private String fecha;
 
     @ManyToOne
-    @JoinColumn (name = "usuario")
+    @JoinColumn (name = "usuario", referencedColumnName = "id")
     private Usuario usuario;
 
     @Column(name="total")
-    private String total;
+    private Double total;
 
     @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -43,7 +44,7 @@ public class Pedido implements Serializable {
                 "id=" + id +
                 ", codigo='" + codigo + '\'' +
                 ", fecha='" + fecha + '\'' +
-                ", usuario=" + usuario.getNombre() +
+                ", usuario=" + usuario.getId() +
                 ", total=" + total +
                 ", items=" + items +
                 '}';

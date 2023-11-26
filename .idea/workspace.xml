@@ -5,25 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a84aa4ea-44d8-4b00-b4db-70bce4b69d6f" name="Changes" comment="Creado un login funcional y una tabla donde aparezca los pedidos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/EditarPedidoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/editarPedido.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/DetailsViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/MakeOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/CrearSesionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/CrearSesionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/CrearSesionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/EditarPedidoController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/PedidosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/PedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/UserViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/controllers/VentanaPedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/item/ItemDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/Pedido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/orders/PedidoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/products/ProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestionpedidofxml/domain/user/UsuarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/pedidosview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/editarPedido.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/pedidosview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/user-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-crearSesion.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/ventana-pedido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestionpedidofxml/views/details-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +57,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rafae/Downloads/GestorJegosHibernate-master/GestorJegosHibernate-master&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/GestionPedidoFXML",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\java\com\example\gestionpedidofxml\domain" />
       <recent name="C:\Users\rafae\IdeaProjects\GestionPedidoFXML\src\main\resources\com\example\gestionpedidofxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -117,6 +124,10 @@
       <workItem from="1700205086408" duration="3514000" />
       <workItem from="1700639439037" duration="14924000" />
       <workItem from="1700666839304" duration="4982000" />
+      <workItem from="1700723273070" duration="18734000" />
+      <workItem from="1700809935498" duration="18272000" />
+      <workItem from="1700907461245" duration="7906000" />
+      <workItem from="1700989298907" duration="3809000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <option name="closed" value="true" />

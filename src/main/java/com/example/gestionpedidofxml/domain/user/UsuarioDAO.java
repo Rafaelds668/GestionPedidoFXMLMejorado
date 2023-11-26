@@ -2,7 +2,9 @@ package com.example.gestionpedidofxml.domain.user;
 
 import com.example.gestionpedidofxml.domain.DAO;
 import com.example.gestionpedidofxml.domain.HibernateUtil;
+import jakarta.persistence.NoResultException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
@@ -12,8 +14,8 @@ public class UsuarioDAO implements DAO<Usuario> {
     public ArrayList<Usuario> getAll() {
         var salida = new ArrayList<Usuario>(0);
 
-        try (Session s = HibernateUtil.getSessionFactory().getCurrentSession()){
-            Query<Usuario> q = s.createQuery("from Usuario", Usuario.class);
+        try(Session s = HibernateUtil.getSessionFactory().openSession()){
+            Query<Usuario> q = s.createQuery("from Usuario ",Usuario.class);
             salida = (ArrayList<Usuario>) q.getResultList();
         }
 
@@ -23,8 +25,7 @@ public class UsuarioDAO implements DAO<Usuario> {
     @Override
     public Usuario get(Long id) {
         var salida = new Usuario();
-
-        try (Session session = HibernateUtil.getSessionFactory().openSession()){
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
             salida = session.get(Usuario.class, id);
         }
         return salida;
@@ -45,16 +46,23 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     }
 
-    public Usuario validateUser (String email, String pass){
+    public Usuario validateUser (String email, String pass)  {
+        //Desde un lambda no se puede escribir desde una variable externa.
         Usuario result = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()){
-            Query<Usuario> q = session.createQuery("from Usuario where email=:u and contrasenya=:p", Usuario.class);
-            q.setParameter("u", email);
-            q.setParameter("p", pass);
+
+        //Si la sesión está dentro de un try con recursos se cierra sola.
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            //Se hacen consultas a la entidad (clase User) no a la tabla.
+            Query<Usuario> query = session.createQuery("from Usuario where email=:e and contrasenya=:p", Usuario.class);
+
+            //Se refieren a los que entran por el método.
+            query.setParameter("e", email);
+            query.setParameter("p", pass);
+            //
 
             try {
-                result = q.getSingleResult();
-            } catch (Exception e) {
+                result = query.getSingleResult();
+            } catch (Exception e){
                 System.out.println(e.getMessage());
             }
         }

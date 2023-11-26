@@ -24,7 +24,7 @@ public class Item implements Serializable {
      */
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     /**
      * Codigo de pedido al que pertenece el item
@@ -52,7 +52,7 @@ public class Item implements Serializable {
         return "Item{" +
                 "id=" + id +
                 ", pedido=" + pedido.getCodigo() +
-                ", producto=" + producto.getNombre() +
+                ", producto=" + producto +
                 ", cantidad=" + cantidad +
                 '}';
     }

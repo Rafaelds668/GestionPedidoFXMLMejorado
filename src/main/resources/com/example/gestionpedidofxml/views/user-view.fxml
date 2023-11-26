@@ -16,13 +16,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="584.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.PedidosController">
+<VBox prefHeight="584.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionpedidofxml.controllers.UserViewController">
    <children>
       <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
               <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarAcercaDe" text="Acerca de..." />
             </items>
           </Menu>
         </menus>
@@ -44,7 +45,7 @@
                               <Insets bottom="10.0" left="30.0" top="5.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="labelTitulo" text="Bienvenido, usuario" textFill="RED">
+                        <Label fx:id="lblUsuario" text="Bienvenido, usuario" textFill="RED">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
@@ -58,22 +59,23 @@
                <bottom>
                   <VBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="795.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Label fx:id="info" contentDisplay="CENTER" text="Informacion sobre sus pedidos" textFill="RED">
+                        <Label contentDisplay="CENTER" text="Informacion sobre sus pedidos" textFill="RED">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lTotal" text="Label" textFill="RED">
+                        <Label text="Pedido" textFill="RED">
                            <font>
                               <Font size="11.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tvPedidos" prefHeight="230.0" prefWidth="139.0" stylesheets="@../style.css">
+                        <TableView fx:id="tPedidos" prefHeight="262.0" prefWidth="829.0" stylesheets="@../style.css">
                           <columns>
-                            <TableColumn fx:id="colIdPedido" prefWidth="132.79996299743652" text="ID" />
-                              <TableColumn fx:id="colFecha" prefWidth="175.0" text="FECHA" />
-                              <TableColumn fx:id="colUsuario" prefWidth="226.0" text="USUARIO" />
-                              <TableColumn fx:id="colTotal" prefWidth="255.0" text="TOTAL" />
+                            <TableColumn fx:id="cIdPedido" prefWidth="141.0" text="ID" />
+                              <TableColumn fx:id="cCodigoPedido" prefWidth="131.0" text="CODIGO" />
+                              <TableColumn fx:id="cFecha" prefWidth="199.0" text="FECHA" />
+                              <TableColumn fx:id="cUsuario" prefWidth="214.0" text="USUARIO" />
+                              <TableColumn fx:id="cTotal" prefWidth="151.0" text="TOTAL" />
                           </columns>
                            <VBox.margin>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
@@ -81,10 +83,8 @@
                         </TableView>
                         <AnchorPane prefHeight="125.0" prefWidth="830.0">
                            <children>
-                              <Button fx:id="btnEliminar" layoutX="342.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #ff0000;" text="ELIMINAR" textFill="WHITE" />
-                              <Button fx:id="btnEditar" layoutX="637.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #867b7b;" text="EDITAR" />
-                              <Button fx:id="btnNuevoPedido" alignment="CENTER" contentDisplay="RIGHT" layoutX="50.0" mnemonicParsing="false" onAction="#nuevoPedido" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #2b7835;" text="+ NUEVO PEDIDO" textAlignment="RIGHT" textFill="WHITE" />
-                              <Button fx:id="btnDetalles" layoutX="341.0" layoutY="63.0" mnemonicParsing="false" onAction="#detalles" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #4400ff;" text="DETALLES" textFill="WHITE" />
+                              <Button fx:id="btnDelete" layoutX="598.0" layoutY="22.0" mnemonicParsing="false" onAction="#deletePedido" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #ff0000;" text="ELIMINAR" textFill="WHITE" />
+                              <Button fx:id="btnAdd" alignment="CENTER" contentDisplay="RIGHT" layoutX="123.0" layoutY="22.0" mnemonicParsing="false" onAction="#addPedido" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #2b7835;" text="+ AÑADIR" textAlignment="RIGHT" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                      </children>
