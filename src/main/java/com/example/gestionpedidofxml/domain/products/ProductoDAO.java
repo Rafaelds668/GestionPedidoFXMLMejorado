@@ -8,6 +8,11 @@ import com.example.gestionpedidofxml.domain.HibernateUtil;
 import java.util.ArrayList;
 
 public class ProductoDAO implements DAO<Producto> {
+    /**
+     * Obtiene todos los registros de productos almacenados en la base de datos.
+     *
+     * @return Una lista de ítems que representa todos los registros de productos en la base de datos.
+     */
     @Override
     public ArrayList<Producto> getAll() {
         var salida = new ArrayList<Producto>(0);
@@ -17,6 +22,7 @@ public class ProductoDAO implements DAO<Producto> {
         }
         return salida;
     }
+
 
     @Override
     public Producto get(Long id) {

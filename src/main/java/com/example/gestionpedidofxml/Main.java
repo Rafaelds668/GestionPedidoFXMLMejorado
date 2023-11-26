@@ -11,6 +11,13 @@ public class Main extends Application {
 
     private static Stage myStage;
 
+    /**
+     * Inicia la aplicación JavaFX, cargando la interfaz gráfica de usuario (GUI) desde el archivo FXML de la pantalla de inicio
+     * y mostrándola en una nueva ventana (Stage).
+     *
+     * @param stage La ventana (Stage) en la que se mostrará la interfaz gráfica de usuario.
+     * @throws IOException Se lanza una excepción de entrada/salida si hay algún problema al cargar el archivo FXML.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         myStage = stage;
@@ -22,6 +29,13 @@ public class Main extends Application {
         stage.show();
     }
 
+    /**
+     * Carga y muestra una nueva interfaz gráfica de usuario (GUI) desde un archivo FXML en la ventana actual.
+     *
+     * @param fxml   El nombre del archivo FXML que contiene la definición de la interfaz gráfica.
+     * @param titulo El título que se asignará a la ventana al cargar la nueva interfaz gráfica.
+     * @throws RuntimeException Se lanza una excepción si hay un error al cargar el archivo FXML.
+     */
     public static void loadFXML (String fxml, String titulo){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/"+fxml));

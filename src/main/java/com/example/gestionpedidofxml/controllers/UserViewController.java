@@ -59,6 +59,12 @@ public class UserViewController implements Initializable {
     private final PedidoDAO pedidoDAO = new PedidoDAO(); //Creo una instancia de PedidoDAO
 
     public UserViewController(){}
+    /**
+     * Inicializa la vista del controlador, configurando la tabla de pedidos y otros elementos visuales.
+     *
+     * @param url            Ubicación relativa del archivo FXML.
+     * @param resourceBundle Recursos específicos del idioma.
+     */
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //Rellenar la tabla
         cIdPedido.setCellValueFactory( ( fila ) -> {
@@ -106,7 +112,10 @@ public class UserViewController implements Initializable {
         });
 
     }
-
+    /**
+     * Carga la lista de pedidos del usuario actual en la tabla, calculando y estableciendo los totales de cada pedido.
+     * Finalmente, asigna la lista Observable como los datos a mostrar en la tabla de pedidos.
+     */
     private void cargarLista(){
 
 //Obtiene la lista de pedidos del usuario actual y la asigna a la lista Observable.
@@ -123,15 +132,12 @@ public class UserViewController implements Initializable {
         tPedidos.setItems(observablePedido);
     }
 
-    private Double calcularTotalPedidos(Pedido pedido){
-        Double total = 0.0;
-
-        for (Item items : pedido.getItems()){
-            total += items.getProducto().getPrecio() * items.getCantidad();
-        }
-        return total;
-    }
-
+    /**
+     * Calcula el total del pedido sumando los productos de cada ítem multiplicados por su cantidad.
+     *
+     * @param order Pedido del cual se calcula el total.
+     * @return El total calculado del pedido.
+     */
     private Double calcularTotalPedido(Pedido order) {
         //Inicializa la variable total como 0.0 para almacenar el total del pedido.
         Double total  = 0.0;
@@ -145,12 +151,17 @@ public class UserViewController implements Initializable {
         //Retorna el total calculado del pedido.
         return total;
     }
+    /**
+     * Método para cerrar sesión, estableciendo el usuario actual en null y cargando la pantalla de inicio de sesión.
+     */
     public void logout(ActionEvent actionEvent){
         Session.setCurrentUser(null);
         Main.loadFXML("login.fxml", "Login");
     }
 
-
+    /**
+     * Método para mostrar información acerca del creador de la aplicación en un cuadro de diálogo.
+     */
     public void mostrarAcercaDe (ActionEvent actionEvent){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Acerca de");
@@ -158,6 +169,13 @@ public class UserViewController implements Initializable {
         alert.setContentText("Rafael Delgado Shepherd desde 2ºDAM");
         alert.showAndWait();
     }
+    /**
+     * Maneja el evento de agregar un nuevo pedido. Crea un nuevo pedido, asigna un código único, establece la fecha actual,
+     * relaciona el usuario actual, guarda el pedido en la base de datos, actualiza la lista observable y muestra una
+     * ventana de información con el código del nuevo pedido.
+     *
+     * @param actionEvent Evento que desencadena esta operación.
+     */
     @javafx.fxml.FXML
     public void addPedido (ActionEvent actionEvent){
         Pedido pedidoAniadido = new Pedido();
@@ -206,6 +224,12 @@ public class UserViewController implements Initializable {
 
     }
 
+    /**
+     * Maneja el evento de eliminar un pedido. Obtiene el pedido seleccionado, muestra un diálogo de confirmación y, si el usuario
+     * confirma la eliminación, borra el pedido de la base de datos y lo quita de la lista observable de pedidos.
+     *
+     * @param actionEvent Evento que desencadena esta operación.
+     */
     @javafx.fxml.FXML
     public void deletePedido (ActionEvent actionEvent){
         //Se coge el pedido seleccionado.

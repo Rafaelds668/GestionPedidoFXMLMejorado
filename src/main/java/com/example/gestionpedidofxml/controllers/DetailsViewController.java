@@ -20,6 +20,11 @@ import java.io.Serializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la interfaz de usuario para la visualización y gestión de detalles de un pedido.
+ * Implementa la interfaz {@code Initializable} de JavaFX.
+ */
+
 public class DetailsViewController implements Initializable {
 
     @javafx.fxml.FXML
@@ -37,6 +42,14 @@ public class DetailsViewController implements Initializable {
     private ObservableList<Item> observableListItem;
 
     private ItemDAO itemDAO = new ItemDAO();
+
+    /**
+     * Método de inicialización que se llama automáticamente al cargar la interfaz.
+     * Configura las columnas de la tabla y carga los datos de los detalles del pedido.
+     *
+     * @param url             La ubicación relativa del archivo FXML.
+     * @param resourceBundle  Los recursos específicos del local.
+     */
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -75,13 +88,22 @@ public class DetailsViewController implements Initializable {
         tItem.setItems(observableListItem);
     }
 
+    /**
+     * Método para cerrar sesión, estableciendo el usuario actual en null y cargando la pantalla de inicio de sesión.
+     */
     public void logout(){
         Session.setCurrentUser(null);
         Main.loadFXML("login.fxml", "Login");
     }
+    /**
+     * Método para regresar a la vista principal de pedidos del usuario actual.
+     */
     public void volver(){
         Main.loadFXML("user-view.fxml", "Pedidos de " + Session.getCurrentUser().getNombre());
     }
+    /**
+     * Método para mostrar información acerca del creador de la aplicación en un cuadro de diálogo.
+     */
     public void mostarAcercaDe(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Acerca de ");
@@ -89,14 +111,20 @@ public class DetailsViewController implements Initializable {
         alert.setContentText("Rafael Delgado Shepherd desde 2ºDAM");
         alert.showAndWait();
     }
-
+    /**
+     * Método de acción para agregar un nuevo ítem al pedido actual.
+     * Carga la interfaz para realizar un nuevo pedido.
+     */
     @javafx.fxml.FXML
     public void addItem(){
         var item = new Item();
         Session.setItem(item);
         Main.loadFXML("hacer-pedido.fxml", "Añadir item en el pedido " + Session.getCurrentOrder().getCodigo());
     }
-
+    /**
+     * Método de acción para eliminar un ítem seleccionado de la tabla y de la base de datos.
+     * Muestra un cuadro de diálogo de confirmación antes de realizar la eliminación.
+     */
     @javafx.fxml.FXML
     public void deleteItem(){
 

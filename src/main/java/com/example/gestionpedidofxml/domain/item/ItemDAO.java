@@ -15,7 +15,11 @@ import java.util.HashMap;
 
 public class ItemDAO implements DAO<Item> {
 
-
+    /**
+     * Obtiene todos los registros de ítems almacenados en la base de datos.
+     *
+     * @return Una lista de ítems que representa todos los registros de ítems en la base de datos.
+     */
     @Override
     public ArrayList<Item> getAll() {
         var salida = new ArrayList<Item>(0);
@@ -25,7 +29,12 @@ public class ItemDAO implements DAO<Item> {
         }
         return salida;
     }
-
+    /**
+     * Obtiene un ítem de la base de datos según su identificador único.
+     *
+     * @param id Identificador único del ítem que se desea recuperar.
+     * @return Un objeto de tipo Item que representa el ítem recuperado de la base de datos.
+     */
     @Override
     public Item get(Long id) {
         var salida = new Item();
@@ -35,6 +44,13 @@ public class ItemDAO implements DAO<Item> {
         return salida;
     }
 
+    /**
+     * Guarda un nuevo ítem o actualiza uno existente en la base de datos. Si el ítem ya tiene un identificador único,
+     * se considera una actualización; de lo contrario, se trata de un nuevo ítem que se persiste en la base de datos.
+     *
+     * @param data El ítem que se desea guardar o actualizar en la base de datos.
+     * @return Un objeto de tipo Item que representa el ítem guardado o actualizado en la base de datos.
+     */
     @Override
     public Item save(Item data) {
         try(org.hibernate.Session session = HibernateUtil.getSessionFactory().openSession()){
@@ -53,6 +69,11 @@ public class ItemDAO implements DAO<Item> {
         return data;
     }
 
+    /**
+     * Actualiza un ítem existente en la base de datos.
+     *
+     * @param data El ítem que se desea actualizar en la base de datos.
+     */
     @Override
     public void update(Item data) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -76,6 +97,11 @@ public class ItemDAO implements DAO<Item> {
         }
     }
 
+    /**
+     * Elimina un ítem de la base de datos.
+     *
+     * @param data El ítem que se desea eliminar de la base de datos.
+     */
     @Override
     public void delete(Item data) {
         HibernateUtil.getSessionFactory().inTransaction(session -> {

@@ -16,6 +16,10 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la interfaz para realizar un nuevo pedido.
+ * Implementa la interfaz {@code Initializable} de JavaFX.
+ */
 public class MakeOrderController implements Initializable {
     @javafx.fxml.FXML
     private Spinner<Integer> spCantidad;
@@ -28,6 +32,13 @@ public class MakeOrderController implements Initializable {
 
     private ObservableList<Producto> observableListProducto;
 
+    /**
+     * Método de inicialización que activa el comboBox y el spinner
+     *
+     * @param url             La ubicación relativa del archivo FXML.
+     * @param resourceBundle  Los recursos específicos del local.
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         observableListProducto = FXCollections.observableArrayList();
@@ -36,11 +47,17 @@ public class MakeOrderController implements Initializable {
         comboProducto.setItems(observableListProducto);
         spCantidad.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 1, 1));
     }
+    /**
+     * Método para cerrar sesión, estableciendo el usuario actual en null y cargando la pantalla de inicio de sesión.
+     */
     @javafx.fxml.FXML
     public void logout(ActionEvent actionEvent){
         Session.setCurrentOrder(null);
         Main.loadFXML("login.fxml", "Login");
     }
+    /**
+     * Método para mostrar información acerca del creador de la aplicación en un cuadro de diálogo.
+     */
     @javafx.fxml.FXML
     public void mostarAcercaDe(ActionEvent actionEvent){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -50,6 +67,11 @@ public class MakeOrderController implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * Maneja el evento de aceptar al realizar una acción, como agregar un ítem al pedido.
+     *
+     * @param actionEvent El evento de acción que desencadena esta operación.
+     */
     @javafx.fxml.FXML
     public void aceptar(ActionEvent actionEvent){
         Pedido pedido = Session.getCurrentOrder();
@@ -65,6 +87,9 @@ public class MakeOrderController implements Initializable {
         }
     }
 
+    /**
+     * Método para regresar a la vista principal de pedidos del usuario actual.
+     */
     @javafx.fxml.FXML
     public void volver(ActionEvent actionEvent){
         Main.loadFXML("user-view.fxml", "Pediddos de " + Session.getCurrentUser().getNombre());

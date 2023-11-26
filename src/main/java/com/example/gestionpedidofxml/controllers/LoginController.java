@@ -14,6 +14,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controlador de la interfaz de inicio de sesión.
+ * Implementa la interfaz {@code Initializable} de JavaFX.
+ */
 public class LoginController implements Initializable {
 
     @FXML
@@ -25,12 +29,23 @@ public class LoginController implements Initializable {
     @FXML
     private Label info;
 
-
+    /**
+     * Método de inicialización que se llama automáticamente al cargar la interfaz.
+     *
+     * @param url             La ubicación relativa del archivo FXML.
+     * @param resourceBundle  Los recursos específicos del local.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
 
+    /**
+     * Método de acción que se activa al presionar el botón de inicio de sesión.
+     * Valida los datos de usuario y contraseña ingresados y realiza el acceso correspondiente.
+     *
+     * @param actionEvent  Evento de acción asociado al botón de inicio de sesión.
+     */
     @FXML
     public void login(ActionEvent actionEvent){
         String user = txtUser.getText();
@@ -57,7 +72,4 @@ public class LoginController implements Initializable {
 
         }
     }
-
-
-
 }

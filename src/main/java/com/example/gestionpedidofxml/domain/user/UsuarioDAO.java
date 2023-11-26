@@ -10,6 +10,11 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 
 public class UsuarioDAO implements DAO<Usuario> {
+    /**
+     * Obtiene todos los registros de usuarios almacenados en la base de datos.
+     *
+     * @return Una lista de usuarios que representa todos los registros de usuarios en la base de datos.
+     */
     @Override
     public ArrayList<Usuario> getAll() {
         var salida = new ArrayList<Usuario>(0);
@@ -22,6 +27,12 @@ public class UsuarioDAO implements DAO<Usuario> {
         return salida;
     }
 
+    /**
+     * Obtiene un usuario de la base de datos según su identificador único.
+     *
+     * @param id Identificador único del usuario que se desea recuperar.
+     * @return Un objeto de tipo Usuario que representa el usuario recuperado de la base de datos.
+     */
     @Override
     public Usuario get(Long id) {
         var salida = new Usuario();
@@ -46,6 +57,14 @@ public class UsuarioDAO implements DAO<Usuario> {
 
     }
 
+    /**
+     * Valida las credenciales de un usuario comparando el correo electrónico y la contraseña proporcionados con los
+     * registros almacenados en la base de datos.
+     *
+     * @param email Correo electrónico del usuario que se desea validar.
+     * @param pass Contraseña del usuario que se desea validar.
+     * @return Un objeto de tipo Usuario si las credenciales son válidas; de lo contrario, devuelve null.
+     */
     public Usuario validateUser (String email, String pass)  {
         //Desde un lambda no se puede escribir desde una variable externa.
         Usuario result = null;

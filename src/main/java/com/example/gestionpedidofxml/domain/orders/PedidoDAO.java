@@ -19,6 +19,11 @@ import java.util.List;
 @Log
 public class PedidoDAO implements DAO<Pedido> {
 
+    /**
+     * Obtiene todos los registros de pedido almacenados en la base de datos.
+     *
+     * @return Una lista de pedidos que representa todos los registros de pedidos en la base de datos.
+     */
     @Override
     public ArrayList<Pedido> getAll() {
         var salida = new ArrayList<Pedido>(0);
@@ -29,6 +34,12 @@ public class PedidoDAO implements DAO<Pedido> {
         return salida;
     }
 
+    /**
+     * Obtiene un pedido de la base de datos según su identificador único.
+     *
+     * @param id Identificador único del pedio que se desea recuperar.
+     * @return Un objeto de tipo Pedido que representa el ítem recuperado de la base de datos.
+     */
     @Override
     public Pedido get(Long id) {
         var salida = new Pedido();
@@ -38,6 +49,13 @@ public class PedidoDAO implements DAO<Pedido> {
         return salida;
     }
 
+    /**
+     * Guarda un nuevo pedido en la base de datos. Si el pedido ya tiene un identificador único,
+     * se considera una actualización; de lo contrario, se trata de un nuevo pedido que se persiste en la base de datos.
+     *
+     * @param data El pedido que se desea guardar en la base de datos.
+     * @return Un objeto de tipo Pedido que representa el pedido guardado en la base de datos.
+     */
     @Override
     public Pedido save(Pedido data) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -62,6 +80,11 @@ public class PedidoDAO implements DAO<Pedido> {
         }
     }
 
+    /**
+     * Actualiza un pedido existente en la base de datos.
+     *
+     * @param data El pedido que se desea actualizar en la base de datos.
+     */
     @Override
     public void update(Pedido data) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -84,6 +107,11 @@ public class PedidoDAO implements DAO<Pedido> {
         }
     }
 
+    /**
+     * Elimina un pedido de la base de datos.
+     *
+     * @param data El pedido que se desea eliminar de la base de datos.
+     */
     @Override
     public void delete(Pedido data) {
         HibernateUtil.getSessionFactory().inTransaction((session -> {
