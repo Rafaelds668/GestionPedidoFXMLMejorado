@@ -10,14 +10,24 @@ import com.example.gestionpedidofxml.domain.products.Producto;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 /**
@@ -42,6 +52,14 @@ public class DetailsViewController implements Initializable {
     private ObservableList<Item> observableListItem;
 
     private ItemDAO itemDAO = new ItemDAO();
+    @javafx.fxml.FXML
+    private MenuItem menubarLogout;
+    @javafx.fxml.FXML
+    private MenuItem menuVolver;
+    @javafx.fxml.FXML
+    private Button btnAdd;
+    @javafx.fxml.FXML
+    private Button btnDelete;
 
     /**
      * Método de inicialización que se llama automáticamente al cargar la interfaz.
@@ -148,6 +166,25 @@ public class DetailsViewController implements Initializable {
             alert.setContentText("Por favor, selecciona un pedido para eliminar.");
             alert.showAndWait();
         }
+    }
+    @javafx.fxml.FXML
+    public void imprimir(ActionEvent actionEvent) throws SQLException, JRException {
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestionpedidos", "root", "");
+        HashMap<String, Object> hashMap = new HashMap<>();
+
+        hashMap.put("empresa", "RAIMON S.L");
+        hashMap.put("pedido",Session.getCurrentOrder().getCodigo());
+
+        JasperPrint jasperPrint = JasperFillManager.fillReport("gestionPedidos.jasper", hashMap, connection);
+
+        // Mostrar el informe en una ventana
+        JasperViewer.viewReport(jasperPrint, false);
+
+        JRPdfExporter exp = new JRPdfExporter();
+        exp.setExporterInput(new SimpleExporterInput(jasperPrint));
+        exp.setExporterOutput(new SimpleOutputStreamExporterOutput("gestor_pedido.pdf"));
+        exp.setConfiguration(new SimplePdfExporterConfiguration());
+        exp.exportReport();
     }
 }
 

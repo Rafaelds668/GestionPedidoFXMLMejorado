@@ -8,6 +8,7 @@ module com.example.gestionpedidofxml {
     requires org.hibernate.orm.core;
     requires java.naming;
     requires java.sql;
+    requires jasperreports;
 
     opens com.example.gestionpedidofxml.domain.user;
     opens com.example.gestionpedidofxml.domain.item;
